@@ -8,6 +8,13 @@ public class Enemy : MonoBehaviour
     float distance;
     private float speed = 5;
     private float speedr;
+    public GameObject projectile1;
+    public GameObject projectile2;
+    private float lastShotTime;
+    private Vector3 shootDirection;
+    private  float projectileSpeed1 = 7;
+    private float projectileSpeed2 = 5;
+    private float timeExist = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -19,9 +26,9 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         distance = Vector3.Distance(transform.position, player.transform.position);
-        if (distance <= 6)
+        if (distance <= 7.5)
         {
-            speedr = 75;
+            speedr = 50;
             // Obtener la dirección hacia el jugador
             Vector3 direction = player.transform.position - transform.position;
             direction.z = 0; // Establecer la dirección en el plano XY
@@ -34,8 +41,34 @@ public class Enemy : MonoBehaviour
 
             // Aplicar la rotación a una velocidad constante
             transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredRotation, speedr * Time.deltaTime);
+
+            // Comprobar si está de frente al jugador
+            if (Mathf.Abs(transform.rotation.eulerAngles.z - desiredRotation.eulerAngles.z) < 10f)
+            {
+                if (Time.time - lastShotTime > 0.5f) // Solo si ha pasado 0.5 segundos desde el último disparo
+                {
+                    shootDirection = (player.transform.position - transform.position).normalized;
+                    // Generar un disparo
+                    GameObject bullet = Instantiate(projectile1, transform.position, Quaternion.identity);
+                    bullet.GetComponent<Rigidbody2D>().velocity = shootDirection * projectileSpeed1;
+                    lastShotTime = Time.time; // Actualizar el tiempo del último disparo
+                    Destroy(bullet, timeExist);
+                }
+            }
+            else
+            {
+                if (Time.time - lastShotTime > 1f) // Solo si ha pasado 1 segundo desde el último disparo
+                {
+                    shootDirection = (player.transform.position - transform.position).normalized;
+                    // Generar un disparo
+                    GameObject bullet2 = Instantiate(projectile2, transform.position, Quaternion.identity);
+                    bullet2.GetComponent<Rigidbody2D>().velocity = shootDirection * projectileSpeed2;
+                    lastShotTime = Time.time; // Actualizar el tiempo del último disparo
+                    Destroy(bullet2, timeExist);
+                }
+            }
         }
-        if (distance > 6 && distance <= 14f)
+        if (distance > 7.5 && distance <= 15f)
         {
             speedr = 140;
             // Obtener la dirección hacia el jugador
@@ -54,5 +87,11 @@ public class Enemy : MonoBehaviour
             // Mover hacia el jugador
             transform.Translate(0, speed * Time.deltaTime, 0);
         }
+
+    }
+    void FixedUpdate()
+    {
+        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), projectile1.GetComponent<Collider2D>());
+        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), projectile2.GetComponent<Collider2D>());
     }
 }
