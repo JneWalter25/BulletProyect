@@ -15464,7 +15464,7 @@ MonoBehaviour:
   - {fileID: -157848469, guid: ff44dd2020648134dbdafb6ebf137612, type: 3}
   - {fileID: -2088283848, guid: ff44dd2020648134dbdafb6ebf137612, type: 3}
   - {fileID: -190150733, guid: ff44dd2020648134dbdafb6ebf137612, type: 3}
-  timeBetweenSprites: 0.25
+  timeBetweenSprites: 0.3
 --- !u!1 &1939804262
 GameObject:
   m_ObjectHideFlags: 0
