@@ -12,8 +12,8 @@ public class Enemy : MonoBehaviour
     public GameObject projectile2;
     private float lastShotTime;
     private Vector3 shootDirection;
-    private  float projectileSpeed1 = 7;
-    private float projectileSpeed2 = 5;
+    private float projectileSpeed1 = 8;
+    private float projectileSpeed2 = 7;
     private float timeExist = 2;
 
     // Start is called before the first frame update
@@ -70,7 +70,7 @@ public class Enemy : MonoBehaviour
         }
         if (distance > 7.5 && distance <= 15f)
         {
-            speedr = 140;
+            speedr = 120;
             // Obtener la dirección hacia el jugador
             Vector3 direction = player.transform.position - transform.position;
             direction.z = 0; // Establecer la dirección en el plano XY
@@ -88,10 +88,5 @@ public class Enemy : MonoBehaviour
             transform.Translate(0, speed * Time.deltaTime, 0);
         }
 
-    }
-    void FixedUpdate()
-    {
-        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), projectile1.GetComponent<Collider2D>());
-        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), projectile2.GetComponent<Collider2D>());
     }
 }

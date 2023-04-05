@@ -35,6 +35,6 @@ public class Proyectil : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), enemy.GetComponent<Collider2D>());
+
     }
 }

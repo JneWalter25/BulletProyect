@@ -6,7 +6,7 @@ public class SpawnEnS : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public Camera mainCamera;
-    private int maxEnemies = 20;
+    private int maxEnemies = 10;
     private float spawnDelay = 2f;
     private int conditionDelay = 300;
     private float startTime;
@@ -37,7 +37,7 @@ public class SpawnEnS : MonoBehaviour
 
     Vector3 GetRandomSpawnPosition()
     {
-        float buffer = 5f;
+        float buffer = 0.1f;
         Vector3 spawnPosition = new Vector3(Random.Range(mainCamera.ViewportToWorldPoint(new Vector3(0f, 0f, 0f)).x - buffer, mainCamera.ViewportToWorldPoint(new Vector3(1f, 1f, 0f)).x + buffer),
                                             Random.Range(mainCamera.ViewportToWorldPoint(new Vector3(0f, 0f, 0f)).y - buffer, mainCamera.ViewportToWorldPoint(new Vector3(1f, 1f, 0f)).y + buffer),
                                             0f);
