@@ -7,7 +7,21 @@ public class Proyectil : MonoBehaviour
     public enum TipoProyectil { Uno, Dos }; // Enumeración de los tipos de proyectil
     int cantidadDeDaño;
     public TipoProyectil tipoDeProyectil; // El tipo de proyectil que es este objeto
-    public GameObject enemy;
+    private GameObject player;
+
+    void Start()
+    {
+        player = GameObject.Find("Player");
+        // Obtenemos la dirección del jugador
+        Vector3 direction = player.transform.position - transform.position;
+        direction.z = 0;
+
+        // Calculamos el ángulo de rotación necesario para mirar al jugador
+        float rotationZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        // Establecemos la rotación de la nave
+        transform.rotation = Quaternion.Euler(0, 0, rotationZ);
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {

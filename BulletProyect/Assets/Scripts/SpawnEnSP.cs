@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnEnS : MonoBehaviour
+public class SpawnEnSP : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public Camera mainCamera;
-    private int maxEnemies = 20;
-    private float spawnDelay = 2f;
+    private int maxEnemies = 10;
+    private float spawnDelay = 4f;
     private int conditionDelay = 120;
     private float startTime;
     private int enemyCount = 0;

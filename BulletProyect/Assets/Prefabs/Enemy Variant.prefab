@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4432098455738751399
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4560665651642364248, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364248, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364248, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364248, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364248, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364248, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364248, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364248, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364248, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364248, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364248, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364249, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_Color.b
+      value: 0.110418424
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364249, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364249, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5943396
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364250, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_Mass
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364254, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_Name
+      value: Enemy Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4560665651642364251, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+--- !u!1 &201332875648985337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4560665651642364254, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+  m_PrefabInstance: {fileID: 4432098455738751399}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1154911041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201332875648985337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf3bbd75f6eb178419f8f3b00f5b21fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile1: {fileID: 5644001949420122493, guid: efa283f4fc6ba934b88990aa0dfa7832, type: 3}
+  projectile2: {fileID: 8541467391121908803, guid: b6e16f1e9d5421c458c2140a5c7a5fa0, type: 3}
+  lastBoatTime: 0
+  botecito: {fileID: 6763454259314119856, guid: 1190d7a60876b4e4b9f11fc1418b76a9, type: 3}
+  previousPosition: {x: 0, y: 0, z: 0}
