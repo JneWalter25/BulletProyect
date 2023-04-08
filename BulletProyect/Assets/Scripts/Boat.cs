@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Boat : MonoBehaviour
 {
-    private float speed = 4;
+    private float speed = 6;
     private float speedr = 120;
     private GameObject player;
     private float distance;
@@ -32,6 +32,7 @@ public class Boat : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             playerController.Speed = 5;
+            playerController.RecibirDaño(1);
             Invoke("ResetPlayerSpeed", 1);
             // Obtener el componente Sprite Renderer
             SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();

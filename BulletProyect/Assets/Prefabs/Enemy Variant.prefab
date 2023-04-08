@@ -7,9 +7,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4560665651642364245, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_Size.x
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364245, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_Size.y
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364245, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4560665651642364248, guid: 285e967151f9720428e3a025a3322b66, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364248, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560665651642364248, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4560665651642364248, guid: 285e967151f9720428e3a025a3322b66, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52,16 +72,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4560665651642364249, guid: 285e967151f9720428e3a025a3322b66, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -752662404, guid: 2bcc3df394e84b74ea78121106cd4d3a, type: 3}
+    - target: {fileID: 4560665651642364249, guid: 285e967151f9720428e3a025a3322b66, type: 3}
       propertyPath: m_Color.b
-      value: 0.110418424
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4560665651642364249, guid: 285e967151f9720428e3a025a3322b66, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4560665651642364249, guid: 285e967151f9720428e3a025a3322b66, type: 3}
       propertyPath: m_Color.r
-      value: 0.5943396
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4560665651642364250, guid: 285e967151f9720428e3a025a3322b66, type: 3}
       propertyPath: m_Mass
@@ -93,6 +117,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile1: {fileID: 5644001949420122493, guid: efa283f4fc6ba934b88990aa0dfa7832, type: 3}
   projectile2: {fileID: 8541467391121908803, guid: b6e16f1e9d5421c458c2140a5c7a5fa0, type: 3}
-  lastBoatTime: 0
   botecito: {fileID: 6763454259314119856, guid: 1190d7a60876b4e4b9f11fc1418b76a9, type: 3}
-  previousPosition: {x: 0, y: 0, z: 0}

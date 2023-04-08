@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     private GameObject player;
+    private GameObject spawn;
     private float distance;
     private float speed = 6;
     private float speedr;
@@ -12,16 +13,18 @@ public class Enemy : MonoBehaviour
     public GameObject projectile2;
     private float lastShotTime;
     private Vector3 shootDirection;
-    private float projectileSpeed1 = 8;
-    private float projectileSpeed2 = 7;
+    private float projectileSpeed1 = 9;
+    private float projectileSpeed2 = 8;
     private float timeExist = 4;
     private Vector3 previousPosition;
-
+    private SpawnEnS spawnEnS;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SavePos", 0, 5);
+        spawn = GameObject.Find("Spawn Enemy");
+        spawnEnS = spawn.GetComponent<SpawnEnS>();
+        InvokeRepeating("SavePos", 0, 2);
         player = GameObject.Find("Player");
         // Obtenemos la dirección del jugador
         Vector3 direction = player.transform.position - transform.position;
@@ -43,7 +46,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         distance = Vector3.Distance(transform.position, player.transform.position);
-        if (distance <= 7.5)
+        if (distance <= 9)
         {
             speedr = 50;
             // Obtener la dirección hacia el jugador
@@ -86,7 +89,7 @@ public class Enemy : MonoBehaviour
                 }
             }
         }
-        if (distance > 7.5 && distance <= 15f)
+        if (distance > 9 && distance <= 18f)
         {
             speedr = 120;
             // Obtener la dirección hacia el jugador
@@ -107,6 +110,7 @@ public class Enemy : MonoBehaviour
         }
         if (previousPosition == transform.position && Time.time - lastShotTime > 20)
         {
+            spawnEnS.EnemyCount--;
             Destroy(gameObject);
         }
 

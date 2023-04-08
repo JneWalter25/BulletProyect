@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7890063808003500045}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.4, y: 46.3, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1206559279, guid: ff44dd2020648134dbdafb6ebf137612, type: 3}
-  m_Color: {r: 0.5771182, g: 0.7578608, b: 0.9339623, a: 1}
+  m_Sprite: {fileID: -285417954, guid: 2b3364602c7c2dc4ea063380a8e78c6a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: -1206559279, guid: ff44dd2020648134dbdafb6ebf137612, type: 3}
-  - {fileID: -157848469, guid: ff44dd2020648134dbdafb6ebf137612, type: 3}
-  - {fileID: -2088283848, guid: ff44dd2020648134dbdafb6ebf137612, type: 3}
-  - {fileID: -190150733, guid: ff44dd2020648134dbdafb6ebf137612, type: 3}
+  - {fileID: -285417954, guid: 2b3364602c7c2dc4ea063380a8e78c6a, type: 3}
+  - {fileID: 1419140314, guid: 2b3364602c7c2dc4ea063380a8e78c6a, type: 3}
+  - {fileID: -1016682571, guid: 2b3364602c7c2dc4ea063380a8e78c6a, type: 3}
+  - {fileID: -121855444, guid: 2b3364602c7c2dc4ea063380a8e78c6a, type: 3}
   timeBetweenSprites: 0.5

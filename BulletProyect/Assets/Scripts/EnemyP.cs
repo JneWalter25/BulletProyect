@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyP : MonoBehaviour
 {
     private GameObject player;
+    private GameObject spawn;
     private float distance;
     private float speed = 5;
     private float speedr;
@@ -19,11 +20,14 @@ public class EnemyP : MonoBehaviour
     public GameObject botecito;
     private Vector3 genPosition;
     private Vector3 previousPosition;
+    private SpawnEnSP spawnEnSP;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SavePos", 0, 5);
+        spawn = GameObject.Find("Spawn EnemyP");
+        spawnEnSP = spawn.GetComponent<SpawnEnSP>();
+        InvokeRepeating("SavePos", 0, 4);
         player = GameObject.Find("Player");
         // Obtenemos la dirección del jugador
         Vector3 direction = player.transform.position - transform.position;
@@ -45,7 +49,7 @@ public class EnemyP : MonoBehaviour
     void Update()
     {
         distance = Vector3.Distance(transform.position, player.transform.position);
-        if (distance <= 7.5)
+        if (distance <= 8)
         {
             speedr = 40;
             // Obtener la dirección hacia el jugador
@@ -98,7 +102,7 @@ public class EnemyP : MonoBehaviour
                 }
             }
         }
-        if (distance > 7.5 && distance <= 15f)
+        if (distance > 8 && distance <= 16f)
         {
             speedr = 110;
             // Obtener la dirección hacia el jugador
@@ -119,6 +123,7 @@ public class EnemyP : MonoBehaviour
         }
         if (previousPosition == transform.position && Time.time - lastShotTime > 20)
         {
+            spawnEnSP.EnemyCount--;
             Destroy(gameObject);
         }
 

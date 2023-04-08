@@ -11,6 +11,11 @@ public class SpawnEnSP : MonoBehaviour
     private int conditionDelay = 120;
     private float startTime;
     private int enemyCount = 0;
+    public int EnemyCount
+    {
+        get { return enemyCount; }
+        set { enemyCount = value; }
+    }
 
     void Start()
     {
@@ -36,7 +41,7 @@ public class SpawnEnSP : MonoBehaviour
 
     Vector3 GetRandomSpawnPosition()
     {
-        float buffer = 0.1f;
+        float buffer = 3f;
         Vector3 spawnPosition = new Vector3(Random.Range(mainCamera.ViewportToWorldPoint(new Vector3(0f, 0f, 0f)).x - buffer, mainCamera.ViewportToWorldPoint(new Vector3(1f, 1f, 0f)).x + buffer),
                                             Random.Range(mainCamera.ViewportToWorldPoint(new Vector3(0f, 0f, 0f)).y - buffer, mainCamera.ViewportToWorldPoint(new Vector3(1f, 1f, 0f)).y + buffer),
                                             0f);

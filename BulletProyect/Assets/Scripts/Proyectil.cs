@@ -20,7 +20,7 @@ public class Proyectil : MonoBehaviour
         float rotationZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         // Establecemos la rotación de la nave
-        transform.rotation = Quaternion.Euler(0, 0, rotationZ);
+        transform.rotation = Quaternion.Euler(0, 0, rotationZ + 90);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -29,7 +29,7 @@ public class Proyectil : MonoBehaviour
         Destroy(gameObject);
 
         // Obtener el componente Life del objeto del jugador y disminuir su vida
-        Life lifeComponent = collision.gameObject.GetComponent<Life>();
+        PlayerController lifeComponent = collision.gameObject.GetComponent<PlayerController>();
         if (lifeComponent != null)
         {
 
